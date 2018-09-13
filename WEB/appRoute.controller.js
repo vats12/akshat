@@ -1,28 +1,33 @@
-var appModule = angular.module('appModule',['ngRoute']);
+var appModules = angular.module('appModule',['ngRoute']);
 
-appModule.config(($routeProvider)=>{
+appModules.config(function($routeProvider){
     $routeProvider.when('/',{
-        templateUrl : 'components/home/homeView.html',
+        templateUrl : 'app/components/home/homeView.html',
         controller : 'homeController'
     })                                                                      
     .when('/about',{
-        templateUrl : 'components/about/aboutView.html',
+        templateUrl : 'app/components/about/aboutView.html',
         controller : 'aboutController'
     })
     .when('/contact',{
-        templateUrl : 'components/contact/contactView.html',
+        templateUrl : 'app/components/contact/contactView.html',
         controller : 'contactController'
     });
 });
 
-appModule.controller('routeController',($scope)=>{
+appModules.controller('routeController',function($scope){
     $scope.message = 'This is E-Commerce Appplication';
 });
 
-appModule.controller('aboutController', function($scope) {
+appModules.controller('homeController', function($scope) {
     $scope.message = 'Look! I am an about page.';
 });
 
-appModule.controller('contactController', function($scope) {
+
+appModules.controller('aboutController', function($scope) {
+    $scope.message = 'Look! I am an about page.';
+});
+
+appModules.controller('contactController', function($scope) {
     $scope.message = 'Contact us! JK. This is just a demo.';
 });

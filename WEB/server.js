@@ -1,11 +1,25 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-app.use(express.static(path.join(__dirname, 'app/components/about')));
-app.use(express.static(path.join(__dirname, 'app/components/contact')));
-app.use(express.static(path.join(__dirname, 'app/components/home')));
+const express = require('express');
+const bodyParser = require('body-parser')
+const path = require('path');
 
-app.use('/',function(req,res){
-res.sendFile('index.html');
+const app = express();
+
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+// parse application/json
+app.use(bodyParser.json());
+
+// app.use(express.static(path.join(__dirname, 'app')));
+// app.use(express.static(path.join(__dirname, 'node_modules')));
+
+app.use(express.static(path.join(__dirname, './')));
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, './', 'index.html'));
 });
-app.listen(4000,()=>{ console.log('app listening to port 4000'); });
+
+app.listen(4000, function() {
+    console.log('localhost:4000');
+});

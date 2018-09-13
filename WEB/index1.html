@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .message-container{
+            display: flex;
+            justify-content: center;
+            background-color: #faf7f3;
+            padding: 10px;
+        }
+        .message{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #faf7f3;
+        }
+        .navigation-bar-container{
+            display: flex;
+            border: 2px bold blue;
+            justify-content: center;
+        }
+        .navigation-bar{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .nav-item{
+            display: flex;
+        }
+        .nav-item>ul{
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+        }
+        .nav-item>ul>li{
+            list-style-type: none;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <div class="message">
+            <p>Free Shipping Over $100 to US, CA, and AU! $150+ to all other countries!</p>
+            <div>
+                <a href="">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-bar-container">
+        <div class="navigation-bar">
+            <div class="nav-item">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+            <div class="nav-item"><h1>Akshat</h1></div>
+            <div class="nav-item">xyz</div>
+        </div>
+    </div>
+</body>
+</html>
