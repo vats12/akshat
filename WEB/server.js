@@ -17,9 +17,8 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './')));
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, './', 'index.html'));
+    res.sendFile(path.join(__dirname, './', 'index2.html'));
 });
-
 app.listen(4000, function() {
     console.log('localhost:4000');
 });

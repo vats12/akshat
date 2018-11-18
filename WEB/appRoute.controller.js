@@ -20,7 +20,7 @@ appModules.controller('routeController',function($scope){
 });
 
 appModules.controller('homeController', function($scope) {
-    $scope.message = 'Look! I am an about page.';
+    $scope.message = 'Look! I am an home page.';
 });
 
 
